@@ -190,7 +190,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
-            className="flex items-center justify-center gap-4"
+            className="flex items-center justify-center gap-4 pb-20 md:pb-0"
           >
             {personalInfo.socialLinks.map((link) => {
               const Icon = iconMap[link.icon] || Code;
@@ -213,12 +213,12 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - only visible on desktop */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex"
       >
         <motion.a
           href="#about"

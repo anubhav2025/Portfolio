@@ -30,11 +30,29 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
-    setIsOpen(false);
+  const handleNavClick = (href: string, isMobile: boolean = false) => {
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (!element) return;
+
+    if (isMobile) {
+      // For mobile: close menu first, then scroll after animation completes
+      setIsOpen(false);
+      setTimeout(() => {
+        const navHeight = 64; // Mobile navbar height
+        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: elementPosition - navHeight,
+          behavior: "smooth"
+        });
+      }, 300); // Wait for menu close animation
+    } else {
+      // For desktop: scroll immediately
+      const navHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - navHeight,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -113,21 +131,17 @@ export function Navbar() {
           >
             <div className="px-4 py-4 space-y-1">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.id}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item.href);
-                  }}
-                  className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                  onClick={() => handleNavClick(item.href, true)}
+                  className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-colors ${
                     activeSection === item.href.replace("#", "")
                       ? "text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20"
                       : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
                   }`}
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
             </div>
           </motion.div>
