@@ -190,7 +190,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
-            className="flex items-center justify-center gap-4 pb-20 md:pb-0"
+            className="flex items-center justify-center gap-4"
           >
             {personalInfo.socialLinks.map((link) => {
               const Icon = iconMap[link.icon] || Code;
@@ -218,7 +218,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex"
+        className="hidden md:flex justify-center mt-12"
       >
         <motion.a
           href="#about"

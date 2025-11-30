@@ -32,7 +32,7 @@ export const personalInfo: PersonalInfo = {
       icon: "code",
     },
   ],
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "https://drive.google.com/file/d/1lGHSuubN3oenxwMyZuwNAG60f7VvROzB/view?usp=sharing",
 };
 
 export const education: Education[] = [
@@ -55,12 +55,12 @@ export const experience: Experience[] = [
     duration: "January 2025 – Present",
     location: "Gurgaon, India",
     description: [
-      "Designed and implemented Asset Owner functionality across the ArmorCode platform, enabling asset-to-finding owner propagation, filtering, and grouping capabilities that improved vulnerability routing and accountability for RBVM customers.",
-      "Built manual asset creation capability via GUI, allowing security engineers to create individual assets directly through the UI with full support for multiple asset types (Host, Images, Cloud Resources), deduplication, and asset-finding correlation.",
-      "Migrated Axonius integration from v1 to v2 Device APIs, implementing adapter connection metadata ingestion as asset tags to enable customers to identify security tool coverage gaps across their infrastructure.",
-      "Developed configurable exclusion logic for Asset-Finding correlation, implementing exclusion lists for generic hostnames, IP addresses, and regex pattern matching to reduce false positive matches.",
-      "Integrated GitGuardian CLI (ggshield) and Axonius metadata tag processing, enabling automated ingestion of secret detection findings and enriched organization details for improved findings routing.",
-      "Enhanced Cobalt penetration testing integration by adding organization and pentest name metadata as finding tags, enabling vulnerability triage based on specific pentest engagements.",
+      "Optimized platform performance and correlation accuracy for 33M+ assets, reducing noise and improving stability and processing efficiency at scale.",
+      "Designed and shipped Asset Owner functionality with ownership propagation and filtering, improving vulnerability routing, grouping, and accountability.",
+      "Built advanced asset–finding correlation logic, including exclusion rules (generic hostnames/IPs), regex patterns, and enriched metadata ingestion to reduce false positives.",
+      "Integrated and enhanced 10+ security tool pipelines, improving scan ingestion, tagging, and classification reliability.",
+      "Implemented key platform improvements such as manual asset creation via UI, feature-flag migration to tenant configs, and ARN/instance-ID tracking for better resource correlation.",
+      "Developed and executed large-scale data migrations updating millions of assets and findings, ensuring backward compatibility and safe multi-tenant production rollouts.",
     ],
     technologies: ["Java", "Spring Boot", "Kubernetes", "Docker", "Elasticsearch"],
   },
@@ -87,7 +87,7 @@ export const projects: Project[] = [
       "Socket.io",
       "NLP",
     ],
-    githubUrl: "https://github.com/anubhavp28/expensio",
+    githubUrl: "https://github.com/anubhav2025/expensio-2.0-main",
   },
   {
     id: "proj-2",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
       "Developed admin dashboard with full CRUD operations for product management, order fulfillment with delivery status updates, and user analytics.",
     ],
     technologies: ["MongoDB", "Express.js", "Node.js", "React.js", "Bootstrap", "PayPal API", "JWT", "REST API"],
-    githubUrl: "https://github.com/anubhavp28/buzzbuy",
+    githubUrl: "https://github.com/anubhav2025/BuzzBuy",
   },
   {
     id: "proj-3",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
       "Achieved a remarkable 50% improvement in overall process efficiency and reduced cycle time by an impressive 30%.",
     ],
     technologies: ["MongoDB", "Express.js", "Node.js", "React.js", "JWT"],
-    githubUrl: "https://github.com/anubhavp28/little-sparks",
+    githubUrl: "https://github.com/anubhav2025/Team_7_Bal_Asha_Trust",
   },
 ];
 
